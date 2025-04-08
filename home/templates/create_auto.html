@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create Auto</title>
+</head>
+<body>
+<nav>
+        <a href="{% url 'homeView' %}">Inicio</a>
+         <a href="{% url 'create_auto' %}">create auto</a>
+    </nav>
+    <h1>Create Auto</h1>  
+    <form action="{% url 'create_auto' %}" method="POST">
+        {%  csrf_token %}
+
+{{formulario}}
+        <input type="submit" value="create">
+       
+    </form>  
+</body>
+</html>
